@@ -43,17 +43,17 @@ command to run: `uvicorn api.main:app --reload`
 
 > Misconception: People think `--reload` should be used in production. False. It’s heavy on resources and only for development. In production, you'd use a stable process manager.
 
-## FastApi Docs
+## FastApi builtin tool - `[server address]/docs`
 A POST request is the standard way to create or send data to a server.
 
 For code: `@app.post("/create")`
 When you type `http://127.0.0.1:8000/create` directly into your browser's address bar and hit Enter, the browser always sends a GET request. FastAPI sees the browser asking for a **"GET"** and says: **"I have a route for /create, but not for GET. Method Not Allowed."**
 
 ### Fix:
-- Use the Built-in Documentation
+- [Option 1]: Use the Built-in Documentation
   - Go to `http://127.0.0.1:8000/docs`. (whatever server address)
   - Click on the **POST** button for `/create`.
   - Click **"Try it out"**.
   - Edit the JSON body (put in a name and price).
   - Click **Execute**.
-- Use tools like **Postman or Hoppscotch**
+- [Option 2]: Use tools like **Postman or Hoppscotch**
